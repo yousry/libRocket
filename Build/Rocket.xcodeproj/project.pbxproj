@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,8 +51,6 @@
 		6E8B1CF4123AB0CC00C451C8 /* XMLNodeHandlerDataGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1C6C123AB0CC00C451C8 /* XMLNodeHandlerDataGrid.cpp */; };
 		6E8B1CF6123AB0CC00C451C8 /* XMLNodeHandlerTabSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1C6E123AB0CC00C451C8 /* XMLNodeHandlerTabSet.cpp */; };
 		6E8B1CF8123AB0CC00C451C8 /* XMLNodeHandlerTextArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1C70123AB0CC00C451C8 /* XMLNodeHandlerTextArea.cpp */; };
-		6E8B1DC3123AB7A500C451C8 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DC2123AB7A500C451C8 /* libfreetype.a */; };
-		6E8B1DE1123ABCA200C451C8 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DC2123AB7A500C451C8 /* libfreetype.a */; };
 		6E8B1DE2123ABCA200C451C8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DD1123ABA3A00C451C8 /* libz.dylib */; };
 		6E8B1DE3123ABCC200C451C8 /* BaseXMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E9D09261209823B00099E1A /* BaseXMLParser.cpp */; };
 		6E8B1DE4123ABCC200C451C8 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6EF28B78120580DA000FAF17 /* Box.cpp */; };
@@ -218,8 +216,8 @@
 		6E8B1E91123ABD1A00C451C8 /* XMLNodeHandlerDataGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1C6C123AB0CC00C451C8 /* XMLNodeHandlerDataGrid.cpp */; };
 		6E8B1E92123ABD1A00C451C8 /* XMLNodeHandlerTabSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1C6E123AB0CC00C451C8 /* XMLNodeHandlerTabSet.cpp */; };
 		6E8B1E93123ABD1A00C451C8 /* XMLNodeHandlerTextArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1C70123AB0CC00C451C8 /* XMLNodeHandlerTextArea.cpp */; };
-		6E8B1E94123ABD2200C451C8 /* RocketCoreOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DDC123ABC7800C451C8 /* RocketCoreOSX.framework */; };
-		6E8B1ECB123AC83300C451C8 /* RocketCoreOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DDC123ABC7800C451C8 /* RocketCoreOSX.framework */; };
+		6E8B1E94123ABD2200C451C8 /* libRocketCoreOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DDC123ABC7800C451C8 /* libRocketCoreOSX.a */; };
+		6E8B1ECB123AC83300C451C8 /* libRocketCoreOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DDC123ABC7800C451C8 /* libRocketCoreOSX.a */; };
 		6E8B1EE3123AC85100C451C8 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1ED0123AC85100C451C8 /* Debugger.cpp */; };
 		6E8B1EE4123AC85100C451C8 /* ElementContextHook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1ED1123AC85100C451C8 /* ElementContextHook.cpp */; };
 		6E8B1EE6123AC85100C451C8 /* ElementInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B1ED3123AC85100C451C8 /* ElementInfo.cpp */; };
@@ -469,6 +467,7 @@
 		6EF3BCFE12481DD40014316D /* WString.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BBFF12481DD40014316D /* WString.h */; };
 		6EF3BCFF12481DD40014316D /* XMLNodeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BC0012481DD40014316D /* XMLNodeHandler.h */; };
 		6EF3BD0012481DD40014316D /* XMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BC0112481DD40014316D /* XMLParser.h */; };
+		A14245FF183C966F002A4A10 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A14245FE183C966F002A4A10 /* libfreetype.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -566,12 +565,12 @@
 		6E8B1DC2123AB7A500C451C8 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = ../../support/lib/libfreetype.a; sourceTree = SOURCE_ROOT; };
 		6E8B1DCF123ABA2200C451C8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6E8B1DD1123ABA3A00C451C8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		6E8B1DDC123ABC7800C451C8 /* RocketCoreOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketCoreOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E8B1DDC123ABC7800C451C8 /* libRocketCoreOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRocketCoreOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B1DDD123ABC7800C451C8 /* RocketCoreOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RocketCoreOSX-Info.plist"; sourceTree = "<group>"; };
-		6E8B1E6B123ABCEF00C451C8 /* RocketControlsOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketControlsOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E8B1E6B123ABCEF00C451C8 /* libRocketControlsOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRocketControlsOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B1E6C123ABCEF00C451C8 /* RocketControlsOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RocketControlsOSX-Info.plist"; sourceTree = "<group>"; };
 		6E8B1EBC123AC7A200C451C8 /* libRocketDebuggeriOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRocketDebuggeriOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E8B1EC6123AC80700C451C8 /* RocketDebuggerOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RocketDebuggerOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E8B1EC6123AC80700C451C8 /* libRocketDebuggerOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRocketDebuggerOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8B1EC7123AC80700C451C8 /* RocketDebuggerOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RocketDebuggerOSX-Info.plist"; sourceTree = "<group>"; };
 		6E8B1ECE123AC85100C451C8 /* BeaconSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconSource.h; path = ../Source/Debugger/BeaconSource.h; sourceTree = SOURCE_ROOT; };
 		6E8B1ECF123AC85100C451C8 /* CommonSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonSource.h; path = ../Source/Debugger/CommonSource.h; sourceTree = SOURCE_ROOT; };
@@ -816,6 +815,7 @@
 		6EF3BBFF12481DD40014316D /* WString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WString.h; path = ../Include/Rocket/Core/WString.h; sourceTree = SOURCE_ROOT; };
 		6EF3BC0012481DD40014316D /* XMLNodeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLNodeHandler.h; path = ../Include/Rocket/Core/XMLNodeHandler.h; sourceTree = SOURCE_ROOT; };
 		6EF3BC0112481DD40014316D /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = ../Include/Rocket/Core/XMLParser.h; sourceTree = SOURCE_ROOT; };
+		A14245FE183C966F002A4A10 /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = "../../../freetype/freetype-2.5.0.1/objs/.libs/libfreetype.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -830,7 +830,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8B1DE1123ABCA200C451C8 /* libfreetype.a in Frameworks */,
 				6E8B1DE2123ABCA200C451C8 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -839,7 +838,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8B1E94123ABD2200C451C8 /* RocketCoreOSX.framework in Frameworks */,
+				6E8B1E94123ABD2200C451C8 /* libRocketCoreOSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,7 +853,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8B1ECB123AC83300C451C8 /* RocketCoreOSX.framework in Frameworks */,
+				6E8B1ECB123AC83300C451C8 /* libRocketCoreOSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +861,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8B1DC3123AB7A500C451C8 /* libfreetype.a in Frameworks */,
+				A14245FF183C966F002A4A10 /* libfreetype.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +871,7 @@
 		0867D691FE84028FC02AAC07 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				A14245FE183C966F002A4A10 /* libfreetype.a */,
 				6E8B1EB6123AC78300C451C8 /* Debugger */,
 				6E8B1BE2123AADEB00C451C8 /* Controls */,
 				6E8B1BD8123AABCD00C451C8 /* Core */,
@@ -1205,12 +1205,12 @@
 		6E9D09201209807A00099E1A /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				6E8B1EC6123AC80700C451C8 /* RocketDebuggerOSX.framework */,
+				6E8B1EC6123AC80700C451C8 /* libRocketDebuggerOSX.a */,
 				6E8B1EC7123AC80700C451C8 /* RocketDebuggerOSX-Info.plist */,
 				6E8B1EBC123AC7A200C451C8 /* libRocketDebuggeriOS.a */,
-				6E8B1DDC123ABC7800C451C8 /* RocketCoreOSX.framework */,
+				6E8B1DDC123ABC7800C451C8 /* libRocketCoreOSX.a */,
 				6E8B1DDD123ABC7800C451C8 /* RocketCoreOSX-Info.plist */,
-				6E8B1E6B123ABCEF00C451C8 /* RocketControlsOSX.framework */,
+				6E8B1E6B123ABCEF00C451C8 /* libRocketControlsOSX.a */,
 				6E8B1E6C123ABCEF00C451C8 /* RocketControlsOSX-Info.plist */,
 				6E8B1DCF123ABA2200C451C8 /* libz.dylib */,
 				6E8B1DD1123ABA3A00C451C8 /* libz.dylib */,
@@ -1395,8 +1395,8 @@
 			);
 			name = RocketCoreOSX;
 			productName = RocketCoreOSX;
-			productReference = 6E8B1DDC123ABC7800C451C8 /* RocketCoreOSX.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 6E8B1DDC123ABC7800C451C8 /* libRocketCoreOSX.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		6E8B1E6A123ABCEF00C451C8 /* RocketControlsOSX */ = {
 			isa = PBXNativeTarget;
@@ -1414,8 +1414,8 @@
 			);
 			name = RocketControlsOSX;
 			productName = RocketControlsOSX;
-			productReference = 6E8B1E6B123ABCEF00C451C8 /* RocketControlsOSX.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 6E8B1E6B123ABCEF00C451C8 /* libRocketControlsOSX.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		6E8B1EBB123AC7A200C451C8 /* RocketDebuggeriOS */ = {
 			isa = PBXNativeTarget;
@@ -1451,8 +1451,8 @@
 			);
 			name = RocketDebuggerOSX;
 			productName = RocketDebuggerOSX;
-			productReference = 6E8B1EC6123AC80700C451C8 /* RocketDebuggerOSX.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 6E8B1EC6123AC80700C451C8 /* libRocketDebuggerOSX.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		D2AAC07D0554694100DB518D /* RocketCoreiOS */ = {
 			isa = PBXNativeTarget;
@@ -1476,8 +1476,11 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Rocket" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -1970,7 +1973,8 @@
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../support/lib\"",
+					"\\\"$(SRCROOT)/../../support/lib\\\"",
+					"/Volumes/Work/Xcode/freetype/freetype-2.5.0.1/objs/.libs",
 				);
 				PRODUCT_NAME = RocketCoreiOS;
 			};
@@ -1987,7 +1991,8 @@
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../support/lib\"",
+					"\\\"$(SRCROOT)/../../support/lib\\\"",
+					"/Volumes/Work/Xcode/freetype/freetype-2.5.0.1/objs/.libs",
 				);
 				PRODUCT_NAME = RocketCoreiOS;
 			};
@@ -1997,16 +2002,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
+					../Dependencies/include,
 					../Include,
-					../../Support/freetype/include,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
@@ -2018,14 +2023,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
+					../Dependencies/include,
 					../Include,
-					../../Support/freetype/include,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
@@ -2065,7 +2069,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2098,7 +2101,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2131,7 +2133,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2160,7 +2161,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2216,7 +2216,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2245,7 +2244,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
