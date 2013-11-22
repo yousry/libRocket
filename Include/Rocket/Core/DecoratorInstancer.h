@@ -32,6 +32,7 @@
 #include <Rocket/Core/Header.h>
 #include <Rocket/Core/PropertyDictionary.h>
 #include <Rocket/Core/PropertySpecification.h>
+#include <Rocket/Core/ContainerWrapper.h>
 
 namespace Rocket {
 namespace Core {
@@ -83,6 +84,8 @@ protected:
 
 	// Releases the instancer.
 	virtual void OnReferenceDeactivate();
+	// Get decorator-id property from properties or "" if not id is given.
+	String GetDecoratorIdProperty(const PropertyDictionary& properties);
 
 private:
 	PropertySpecification properties;

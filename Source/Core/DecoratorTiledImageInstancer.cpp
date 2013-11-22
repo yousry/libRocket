@@ -35,6 +35,9 @@ namespace Core {
 DecoratorTiledImageInstancer::DecoratorTiledImageInstancer()
 {
 	RegisterTileProperty("image", false);
+	RegisterProperty("image-scaling", "ignore")
+		  .AddParser("keyword", "ignore,fill,fit,center");
+    RegisterProperty("color-multiplier", "white").AddParser(COLOR);
 }
 
 DecoratorTiledImageInstancer::~DecoratorTiledImageInstancer()
@@ -51,6 +54,9 @@ Decorator* DecoratorTiledImageInstancer::InstanceDecorator(const String& ROCKET_
 	GetTileProperties(tile, texture_name, rcss_path, properties, "image");
 
 	DecoratorTiledImage* decorator = new DecoratorTiledImage();
+
+	decorator->GetColorMultiplier() = properties.GetProperty("color-multiplier")->value.Get< Colourb >();
+
 	if (decorator->Initialise(tile, texture_name, rcss_path))
 		return decorator;
 

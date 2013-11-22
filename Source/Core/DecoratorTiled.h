@@ -28,6 +28,7 @@
 #ifndef ROCKETCOREDECORATORTILED_H
 #define ROCKETCOREDECORATORTILED_H
 
+#include <Rocket/Core/ContainerWrapper.h>
 #include <Rocket/Core/Decorator.h>
 #include <Rocket/Core/Vertex.h>
 
@@ -75,6 +76,17 @@ public:
 	};
 
 	/**
+		Stores the scaling of a single-image tile.
+	 */
+	enum TileScalingMode
+	{
+		IGNORE = 0,		// Stretch image within container.
+		FILL = 1,		// Fill container with image aspect ratio.
+		FIT = 2,		// Fit image within conatiner and keep aspect ratiob.
+		CENTER = 3		// Center and crop unscaled image image within container.
+	};
+
+	/**
 		Structure for storing the different tiles the tiled decorator uses internally over its
 		surface.
 
@@ -97,7 +109,7 @@ public:
 		/// @param[in] surface_origin The starting point of the first tile to generate.
 		/// @param[in] surface_dimensions The dimensions of the surface to be tiled.
 		/// @param[in] tile_dimensions The dimensions to render this tile at.
-		void GenerateGeometry(std::vector< Vertex >& vertices, std::vector< int >& indices, Element* element, const Vector2f& surface_origin, const Vector2f& surface_dimensions, const Vector2f& tile_dimensions) const;
+		void GenerateGeometry(Container::vector< Vertex >::Type& vertices, Container::vector< int >::Type& indices, Element* element, const Vector2f& surface_origin, const Vector2f& surface_dimensions, const Vector2f& tile_dimensions, const Colourb& color_multiplier = Colourb(255, 255, 255)) const;
 
 		struct TileData
 		{
@@ -105,7 +117,7 @@ public:
 			Vector2f texcoords[2];
 		};
 
-		typedef std::map< RenderInterface*, TileData > TileDataMap;
+		typedef Container::map< RenderInterface*, TileData >::Type TileDataMap;
 
 		int texture_index;
 		Vector2f texcoords[2];
@@ -114,8 +126,14 @@ public:
 		mutable TileDataMap data;
 
 		TileRepeatMode repeat_mode;
+		TileScalingMode scaling_mode;
 		TileOrientation orientation;
 	};
+
+	Colourb & GetColorMultiplier()
+	{
+		return color_multiplier;
+	}
 
 protected:
 	/// Scales a tile dimensions by a fixed value along one axis.
@@ -123,6 +141,8 @@ protected:
 	/// @param axis_value[in] The fixed value to scale against.
 	/// @param axis[in] The axis to scale against; either 0 (for x) or 1 (for y).
 	void ScaleTileDimensions(Vector2f& tile_dimensions, float axis_value, int axis);
+
+	Colourb color_multiplier;
 };
 
 }

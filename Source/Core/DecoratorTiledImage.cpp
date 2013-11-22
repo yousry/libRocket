@@ -27,9 +27,13 @@
 
 #include "precompiled.h"
 #include "DecoratorTiledImage.h"
+#include <Rocket/Core/ContainerWrapper.h>
 #include <Rocket/Core/Element.h>
 #include <Rocket/Core/Geometry.h>
 #include <Rocket/Core/GeometryUtilities.h>
+
+using std::max;
+using std::min;
 
 namespace Rocket {
 namespace Core {
@@ -63,8 +67,67 @@ DecoratorDataHandle DecoratorTiledImage::GenerateElementData(Element* element)
 	Geometry* data = new Geometry(element);
 	data->SetTexture(GetTexture());
 
+	Vector2f dest = element->GetBox().GetSize(Box::PADDING);
+	Vector2f source = tile.GetDimensions(element);
+
 	// Generate the geometry for the tile.
-	tile.GenerateGeometry(data->GetVertices(), data->GetIndices(), element, Vector2f(0, 0), element->GetBox().GetSize(Box::PADDING), tile.GetDimensions(element));
+	switch(tile.scaling_mode) {
+	case IGNORE /* default */: tile.GenerateGeometry(data->GetVertices(), data->GetIndices(), element, Vector2f(0, 0), dest, source, color_multiplier); break;
+	case FILL:
+	case FIT: {
+	  Vector2f offset(0, 0); float f; 
+	  switch(tile.scaling_mode) {  // WARNING: ENUM
+	  case FILL: {
+//	    RenderInterface* render_interface = element->GetRenderInterface();
+//	    Vector2i texture_dimensions = GetTexture(tile.texture_index)->GetDimensions(render_interface);
+	    f = max(dest.y / source.y, dest.x / source.x);
+	  }; break;
+	  case FIT: 
+	    f = min(dest.y / source.y, dest.x / source.x); 
+	    source *= f;
+	    offset.x = (dest.x - source.x)/2;
+	    offset.y = (dest.y - source.y)/2;
+	    dest = source;
+	    break;
+	  }
+	  tile.GenerateGeometry(data->GetVertices(), data->GetIndices(), element, offset, dest, source, color_multiplier); 
+	}; break;
+	case CENTER: 
+	  Vector2f offset(0, 0);
+	  Vector2i texture_dimension;
+	  if (!tile.texcoords_absolute[0][0] || !tile.texcoords_absolute[1][0] || !tile.texcoords_absolute[0][1] || !tile.texcoords_absolute[1][1]) {
+	    RenderInterface* render_interface = element->GetRenderInterface();
+	    texture_dimension = GetTexture(tile.texture_index)->GetDimensions(render_interface);
+	  }
+	  if (source.x > dest.x) { // crop width of image
+	    float diff_begin = (source.x - dest.x)/2, diff_end = diff_begin;
+	    if (!tile.texcoords_absolute[0][0] || !tile.texcoords_absolute[1][0]) {
+	      if (!tile.texcoords_absolute[0][0]) diff_begin /= texture_dimension.x;
+	      if (!tile.texcoords_absolute[1][0]) diff_end /= texture_dimension.x;
+	    }
+	    tile.texcoords[0].x += diff_begin; // -s-begin
+	    tile.texcoords[1].x -= diff_end; // -s-end
+	    source.x = dest.x;
+	  } else {                 // center image
+	    offset.x = (dest.x - source.x)/2;
+	    dest.x = source.x;
+	  }
+	  if (source.y > dest.y) { // crop height of image
+	    float diff_begin = (source.y - dest.y)/2, diff_end = diff_begin;
+	    if (!tile.texcoords_absolute[0][1] || !tile.texcoords_absolute[1][1]) {
+	      if (!tile.texcoords_absolute[0][1]) diff_begin /= texture_dimension.y;
+	      if (!tile.texcoords_absolute[1][1]) diff_end /= texture_dimension.y;
+	    }
+	    tile.texcoords[0].y += diff_begin; // -s-begin
+	    tile.texcoords[1].y -= diff_end; // -s-end
+	    source.y = dest.y;
+	  } else {                 // center image
+	    offset.y = (dest.y - source.y)/2;
+	    dest.y = source.y;
+	  }
+	  tile.GenerateGeometry(data->GetVertices(), data->GetIndices(), element, offset, dest, source, color_multiplier); 
+	  break;
+	}
 
 	return reinterpret_cast<DecoratorDataHandle>(data);
 }

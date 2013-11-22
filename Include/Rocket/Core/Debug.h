@@ -35,7 +35,7 @@
 	#if defined (__MINGW32__)
 		#define ROCKET_BREAK asm("int $0x03")
 	#else
-		#define ROCKET_BREAK __debugbreak();
+		#define ROCKET_BREAK __debugbreak()
 	#endif
 #elif defined (ROCKET_PLATFORM_LINUX)
 	#if defined __i386__ || defined __x86_64__
@@ -51,6 +51,12 @@
 	#else
 		#define ROCKET_BREAK {__asm__("int $3\n" : : );}
 	#endif
+#else
+    #if defined __i386__ || defined __x86_64__
+        #define ROCKET_BREAK asm ("int $0x03" )
+    #else
+        #define ROCKET_BREAK
+    #endif
 #endif
 
 
@@ -107,6 +113,6 @@ template <> struct STATIC_ASSERTION_FAILURE<true>{};
 	
 }
 }
-#define ROCKET_STATIC_ASSERT(cond, msg) Rocket::Core::STATIC_ASSERTION_FAILURE<cond> msg
+#define ROCKET_STATIC_ASSERT(cond, msg) Rocket::Core::STATIC_ASSERTION_FAILURE<cond> msg; (void)msg
 
 #endif

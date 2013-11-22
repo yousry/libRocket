@@ -27,7 +27,7 @@
 
 #include "precompiled.h"
 #include <Rocket/Core/StyleSheet.h>
-#include <algorithm>
+#include <Rocket/Core/ContainerWrapper.h>
 #include "ElementDefinition.h"
 #include "StyleSheetFactory.h"
 #include "StyleSheetNode.h"
@@ -103,7 +103,8 @@ ElementDefinition* StyleSheet::GetElementDefinition(const Element* element) cons
 	// Address cache is disabled for the time being; this doesn't work since the introduction of structural
 	// pseudo-classes.
 	ElementDefinitionCache::iterator cache_iterator;
-/*	String element_address = element->GetAddress();
+#if 0
+	String element_address = element->GetAddress();
 
 	// Look the address up in the definition, see if we've processed a similar element before.
 	cache_iterator = address_cache.find(element_address);
@@ -112,22 +113,24 @@ ElementDefinition* StyleSheet::GetElementDefinition(const Element* element) cons
 		ElementDefinition* definition = (*cache_iterator).second;
 		definition->AddReference();
 		return definition;
-	}*/
-
+	}
+#endif
 	// See if there are any styles defined for this element.
-	std::vector< const StyleSheetNode* > applicable_nodes;
+	Container::vector< const StyleSheetNode* >::Type applicable_nodes;
 
 	String tags[] = {element->GetTagName(), ""};
 	for (int i = 0; i < 2; i++)
 	{
 		NodeIndex::const_iterator iterator = styled_node_index.find(tags[i]);
-		if (iterator != styled_node_index.end())
+		if (iterator != styled_node_index.end() && (*iterator).second.size())
 		{
 			const NodeList& nodes = (*iterator).second;
 
+			NodeList::const_iterator end = nodes.end();
+
 			// There are! Now see if we satisfy all of their parenting requirements. What this involves is traversing the style
 			// nodes backwards, trying to match nodes in the element's hierarchy to nodes in the style hierarchy.
-			for (NodeList::const_iterator iterator = nodes.begin(); iterator != nodes.end(); iterator++)
+			for (NodeList::const_iterator iterator = nodes.begin(); iterator != end; iterator++)
 			{
 				if ((*iterator)->IsApplicable(element))
 				{
@@ -138,7 +141,7 @@ ElementDefinition* StyleSheet::GetElementDefinition(const Element* element) cons
 		}
 	}
 
-	std::sort(applicable_nodes.begin(), applicable_nodes.end(), StyleSheetNodeSort);
+	Container::sort(applicable_nodes.begin(), applicable_nodes.end(), StyleSheetNodeSort);
 
 	// Compile the list of volatile pseudo-classes for this element definition.
 	PseudoClassList volatile_pseudo_classes;
@@ -147,18 +150,19 @@ ElementDefinition* StyleSheet::GetElementDefinition(const Element* element) cons
 	for (int i = 0; i < 2; ++i)
 	{
 		NodeIndex::const_iterator iterator = complete_node_index.find(tags[i]);
-		if (iterator != complete_node_index.end())
+		if (iterator != complete_node_index.end() && (*iterator).second.size())
 		{
 			const NodeList& nodes = (*iterator).second;
+			NodeList::const_iterator end = nodes.end();
 
 			// See if we satisfy all of the parenting requirements for each of these nodes (as in the previous loop).
-			for (NodeList::const_iterator iterator = nodes.begin(); iterator != nodes.end(); iterator++)
+			for (NodeList::const_iterator iterator = nodes.begin(); iterator != end; iterator++)
 			{
 				structurally_volatile |= (*iterator)->IsStructurallyVolatile();
 
 				if ((*iterator)->IsApplicable(element))
 				{
-					std::vector< const StyleSheetNode* > volatile_nodes;
+					Container::vector< const StyleSheetNode* >::Type volatile_nodes;
 					(*iterator)->GetApplicableDescendants(volatile_nodes, element);
 
 					for (size_t i = 0; i < volatile_nodes.size(); ++i)
@@ -196,14 +200,45 @@ ElementDefinition* StyleSheet::GetElementDefinition(const Element* element) cons
 	new_definition->Initialise(applicable_nodes, volatile_pseudo_classes, structurally_volatile);
 
 	// Add to the address cache.
-//	address_cache[element_address] = new_definition;
-//	new_definition->AddReference();
-
+#if 0
+	address_cache[element_address] = new_definition;
+	new_definition->AddReference();
+#endif
 	// Add to the node cache.
 	node_cache[node_ids] = new_definition;
 	new_definition->AddReference();
 
 	return new_definition;
+}
+
+const PropertyDictionary* StyleSheet::FindDecoratorPropertiesWithId(const String& class_name, const String& decorator_id) const
+{
+    StyleSheetNode *node = root->GetChildNode(class_name, StyleSheetNode::CLASS, false);
+    if (!node) {
+      StyleSheetNode *global = root->GetChildNode("", StyleSheetNode::TAG, false);
+      if (global)
+            node = global->GetChildNode(class_name, StyleSheetNode::CLASS, false);
+    }
+    if (node) {
+        // Core::Log::Message(Core::Log::LT_DEBUG, "class %s found", class_name.CString());
+        PropertyGroupMap decorator_definitions;
+        BuildPropertyGroup(decorator_definitions, "decorator", node->GetProperties());
+        for (PropertyGroupMap::const_iterator i=decorator_definitions.begin(); i!=decorator_definitions.end(); ++i) {
+            // Core::Log::Message(Core::Log::LT_DEBUG, " -- group: %s found",(*i).first.CString());
+            const PropertyGroup &group = (*i).second;
+            // Core::Log::Message(Core::Log::LT_DEBUG, "  -- prop: %s", group.first.CString());
+            const PropertyMap &props = group.second.GetProperties();
+            // for (PropertyMap::const_iterator ii=props.begin(); ii!=props.end(); ++ii)
+            //   Core::Log::Message(Core::Log::LT_DEBUG, "   -- value: %s", (*ii).first.CString());
+            PropertyMap::const_iterator deco_id = props.find("decorator-id");
+            if (deco_id != props.end() && (*deco_id).second.ToString() == decorator_id) {
+                // Core::Log::Message(Core::Log::LT_DEBUG, "decorator %s definiton found", decorator_id.CString());
+                return new PropertyDictionary(group.second);
+            }
+        }
+    }
+
+    return NULL;
 }
 
 // Destroys the style sheet.

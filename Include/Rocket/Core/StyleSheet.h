@@ -30,7 +30,7 @@
 
 #include <Rocket/Core/Dictionary.h>
 #include <Rocket/Core/ReferenceCountable.h>
-#include <set>
+#include <Rocket/Core/ContainerWrapper.h>
 #include <Rocket/Core/PropertyDictionary.h>
 
 namespace Rocket {
@@ -50,8 +50,8 @@ class StyleSheetNode;
 class ROCKETCORE_API StyleSheet : public ReferenceCountable
 {
 public:
-	typedef std::set< StyleSheetNode* > NodeList;
-	typedef std::map< String, NodeList > NodeIndex;
+	typedef Container::set< StyleSheetNode* >::Type NodeList;
+	typedef Container::map< String, NodeList >::Type NodeIndex;
 
 	StyleSheet();
 	virtual ~StyleSheet();
@@ -67,6 +67,10 @@ public:
 	/// Returns the compiled element definition for a given element hierarchy. A reference count will be added for the
 	/// caller, so another should not be added. The definition should be released by removing the reference count.
 	ElementDefinition* GetElementDefinition(const Element* element) const;
+
+	/// Returns a properties dictinary of decorator with id of decorator_id within class class_name. NULL if no such
+	/// decorator has been found. The dictionary is created and should be deleted by caller.
+	const PropertyDictionary* FindDecoratorPropertiesWithId(const String& class_name, const String& decorator_id) const;
 
 protected:
 	/// Destroys the style sheet.
@@ -88,7 +92,7 @@ private:
 	// Map of every node, even empty, un-styled, nodes.
 	NodeIndex complete_node_index;
 
-	typedef std::map< String, ElementDefinition* > ElementDefinitionCache;
+	typedef Container::map< String, ElementDefinition* >::Type ElementDefinitionCache;
 	// Index of element addresses to element definitions.
 	mutable ElementDefinitionCache address_cache;
 	// Index of node sets to element definitions.

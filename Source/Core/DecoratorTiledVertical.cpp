@@ -27,6 +27,7 @@
 
 #include "precompiled.h"
 #include "DecoratorTiledVertical.h"
+#include <Rocket/Core/ContainerWrapper.h>
 #include <Rocket/Core/Element.h>
 #include <Rocket/Core/Geometry.h>
 #include <Rocket/Core/GeometryUtilities.h>
@@ -126,11 +127,11 @@ DecoratorDataHandle DecoratorTiledVertical::GenerateElementData(Element* element
 	}
 
 	// Generate the geometry for the left tile.
-	tiles[TOP].GenerateGeometry(data->geometry[tiles[TOP].texture_index]->GetVertices(), data->geometry[tiles[TOP].texture_index]->GetIndices(), element, Vector2f(0, 0), top_dimensions, top_dimensions);
+	tiles[TOP].GenerateGeometry(data->geometry[tiles[TOP].texture_index]->GetVertices(), data->geometry[tiles[TOP].texture_index]->GetIndices(), element, Vector2f(0, 0), top_dimensions, top_dimensions, color_multiplier);
 	// Generate the geometry for the centre tiles.
-	tiles[CENTRE].GenerateGeometry(data->geometry[tiles[CENTRE].texture_index]->GetVertices(), data->geometry[tiles[CENTRE].texture_index]->GetIndices(), element, Vector2f(0, top_dimensions.y), Vector2f(centre_dimensions.x, padded_size.y - (top_dimensions.y + bottom_dimensions.y)), centre_dimensions);
+	tiles[CENTRE].GenerateGeometry(data->geometry[tiles[CENTRE].texture_index]->GetVertices(), data->geometry[tiles[CENTRE].texture_index]->GetIndices(), element, Vector2f(0, top_dimensions.y), Vector2f(centre_dimensions.x, padded_size.y - (top_dimensions.y + bottom_dimensions.y)), centre_dimensions, color_multiplier);
 	// Generate the geometry for the right tile.
-	tiles[BOTTOM].GenerateGeometry(data->geometry[tiles[BOTTOM].texture_index]->GetVertices(), data->geometry[tiles[BOTTOM].texture_index]->GetIndices(), element, Vector2f(0, padded_size.y - bottom_dimensions.y), bottom_dimensions, bottom_dimensions);
+	tiles[BOTTOM].GenerateGeometry(data->geometry[tiles[BOTTOM].texture_index]->GetVertices(), data->geometry[tiles[BOTTOM].texture_index]->GetIndices(), element, Vector2f(0, padded_size.y - bottom_dimensions.y), bottom_dimensions, bottom_dimensions, color_multiplier);
 
 	// Set the textures on the geometry.
 	const Texture* texture = NULL;
