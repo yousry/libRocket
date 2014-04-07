@@ -680,6 +680,41 @@
 		A1E970EF183FAEB1001E5008 /* FontFamily.h in Headers */ = {isa = PBXBuildFile; fileRef = A1E96FF1183FAEB1001E5008 /* FontFamily.h */; };
 		A1E970F0183FAEB1001E5008 /* FontProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1E96FF2183FAEB1001E5008 /* FontProvider.cpp */; };
 		A1E970F1183FAEB1001E5008 /* FontProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1E96FF2183FAEB1001E5008 /* FontProvider.cpp */; };
+		A1FE780618F2949200426D74 /* Clipboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB5A12481D140014316D /* Clipboard.h */; };
+		A1FE780718F2949200426D74 /* Controls.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB5B12481D140014316D /* Controls.h */; };
+		A1FE780818F2949200426D74 /* DataFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB5C12481D140014316D /* DataFormatter.h */; };
+		A1FE780918F2949200426D74 /* DataQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB5D12481D140014316D /* DataQuery.h */; };
+		A1FE780A18F2949200426D74 /* DataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB5E12481D140014316D /* DataSource.h */; };
+		A1FE780B18F2949200426D74 /* DataSourceListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB5F12481D140014316D /* DataSourceListener.h */; };
+		A1FE780C18F2949200426D74 /* ElementDataGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6012481D140014316D /* ElementDataGrid.h */; };
+		A1FE780D18F2949200426D74 /* ElementDataGridCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6112481D140014316D /* ElementDataGridCell.h */; };
+		A1FE780E18F2949200426D74 /* ElementDataGridExpandButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6212481D140014316D /* ElementDataGridExpandButton.h */; };
+		A1FE780F18F2949200426D74 /* ElementDataGridRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6312481D140014316D /* ElementDataGridRow.h */; };
+		A1FE781018F2949200426D74 /* ElementForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6412481D140014316D /* ElementForm.h */; };
+		A1FE781118F2949200426D74 /* ElementFormControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6512481D140014316D /* ElementFormControl.h */; };
+		A1FE781218F2949200426D74 /* ElementFormControlDataSelect.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6612481D140014316D /* ElementFormControlDataSelect.h */; };
+		A1FE781318F2949200426D74 /* ElementFormControlInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6712481D140014316D /* ElementFormControlInput.h */; };
+		A1FE781418F2949200426D74 /* ElementFormControlSelect.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6812481D140014316D /* ElementFormControlSelect.h */; };
+		A1FE781518F2949200426D74 /* ElementFormControlTextArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6912481D140014316D /* ElementFormControlTextArea.h */; };
+		A1FE781618F2949200426D74 /* ElementTabSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6A12481D140014316D /* ElementTabSet.h */; };
+		A1FE781718F2949200426D74 /* Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6B12481D140014316D /* Header.h */; };
+		A1FE781818F2949200426D74 /* SelectOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF3BB6C12481D140014316D /* SelectOption.h */; };
+		A1FE784018F2949200426D74 /* libRocketCoreOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8B1DDC123ABC7800C451C8 /* libRocketCoreOSX.a */; };
+		A1FE785018F294FA00426D74 /* RocketMenuPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784718F294FA00426D74 /* RocketMenuPlugin.cpp */; };
+		A1FE785118F294FA00426D74 /* RocketMenuPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FE784818F294FA00426D74 /* RocketMenuPlugin.h */; };
+		A1FE785218F294FA00426D74 /* ElementProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784918F294FA00426D74 /* ElementProgressBar.cpp */; };
+		A1FE785318F294FA00426D74 /* RocketAnimationPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784A18F294FA00426D74 /* RocketAnimationPlugin.cpp */; };
+		A1FE785418F294FA00426D74 /* Helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784B18F294FA00426D74 /* Helpers.cpp */; };
+		A1FE785518F294FA00426D74 /* RocketAnimationPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FE784C18F294FA00426D74 /* RocketAnimationPlugin.h */; };
+		A1FE785618F294FA00426D74 /* ProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784D18F294FA00426D74 /* ProgressBar.cpp */; };
+		A1FE785718F294FA00426D74 /* PluginUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784E18F294FA00426D74 /* PluginUtils.cpp */; };
+		A1FE785818F294FA00426D74 /* Helpers.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FE784F18F294FA00426D74 /* Helpers.h */; };
+		A1FE785918F2958100426D74 /* RocketMenuPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784718F294FA00426D74 /* RocketMenuPlugin.cpp */; };
+		A1FE785A18F2958100426D74 /* ElementProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784918F294FA00426D74 /* ElementProgressBar.cpp */; };
+		A1FE785B18F2958100426D74 /* RocketAnimationPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784A18F294FA00426D74 /* RocketAnimationPlugin.cpp */; };
+		A1FE785C18F2958100426D74 /* Helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784B18F294FA00426D74 /* Helpers.cpp */; };
+		A1FE785D18F2958100426D74 /* ProgressBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784D18F294FA00426D74 /* ProgressBar.cpp */; };
+		A1FE785E18F2958100426D74 /* PluginUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1FE784E18F294FA00426D74 /* PluginUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -710,6 +745,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6E8B1DDB123ABC7800C451C8;
 			remoteInfo = RocketCoreOSX;
+		};
+		A1FE780418F2949200426D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E8B1DDB123ABC7800C451C8;
+			remoteInfo = RocketCoreOSX;
+		};
+		A1FE785F18F295B100426D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E8B1E6A123ABCEF00C451C8;
+			remoteInfo = RocketControlsOSX;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1135,6 +1184,17 @@
 		A1E96FF0183FAEB1001E5008 /* FontFamily.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontFamily.cpp; sourceTree = "<group>"; };
 		A1E96FF1183FAEB1001E5008 /* FontFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontFamily.h; sourceTree = "<group>"; };
 		A1E96FF2183FAEB1001E5008 /* FontProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontProvider.cpp; sourceTree = "<group>"; };
+		A1FE784418F2949200426D74 /* libRocketExtensionsOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRocketExtensionsOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1FE784518F2949200426D74 /* RocketControlsOSX copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RocketControlsOSX copy-Info.plist"; path = "/Volumes/Work/Xcode/libRocket/libRocket/Build/RocketControlsOSX copy-Info.plist"; sourceTree = "<absolute>"; };
+		A1FE784718F294FA00426D74 /* RocketMenuPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RocketMenuPlugin.cpp; path = ../Source/Ext/RocketMenuPlugin.cpp; sourceTree = "<group>"; };
+		A1FE784818F294FA00426D74 /* RocketMenuPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RocketMenuPlugin.h; path = ../Source/Ext/RocketMenuPlugin.h; sourceTree = "<group>"; };
+		A1FE784918F294FA00426D74 /* ElementProgressBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ElementProgressBar.cpp; path = ../Source/Ext/ElementProgressBar.cpp; sourceTree = "<group>"; };
+		A1FE784A18F294FA00426D74 /* RocketAnimationPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RocketAnimationPlugin.cpp; path = ../Source/Ext/RocketAnimationPlugin.cpp; sourceTree = "<group>"; };
+		A1FE784B18F294FA00426D74 /* Helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Helpers.cpp; path = ../Source/Ext/Helpers.cpp; sourceTree = "<group>"; };
+		A1FE784C18F294FA00426D74 /* RocketAnimationPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RocketAnimationPlugin.h; path = ../Source/Ext/RocketAnimationPlugin.h; sourceTree = "<group>"; };
+		A1FE784D18F294FA00426D74 /* ProgressBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ProgressBar.cpp; path = ../Source/Ext/ProgressBar.cpp; sourceTree = "<group>"; };
+		A1FE784E18F294FA00426D74 /* PluginUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginUtils.cpp; path = ../Source/Ext/PluginUtils.cpp; sourceTree = "<group>"; };
+		A1FE784F18F294FA00426D74 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = ../Source/Ext/Helpers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1176,6 +1236,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1FE783F18F2949200426D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1FE784018F2949200426D74 /* libRocketCoreOSX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1194,7 +1262,10 @@
 				6E8B1EB6123AC78300C451C8 /* Debugger */,
 				6E8B1BE2123AADEB00C451C8 /* Controls */,
 				6E8B1BD8123AABCD00C451C8 /* Core */,
+				A1FE784618F294BF00426D74 /* Ext */,
 				6E9D09201209807A00099E1A /* Libraries */,
+				A1FE784418F2949200426D74 /* libRocketExtensionsOSX.a */,
+				A1FE784518F2949200426D74 /* RocketControlsOSX copy-Info.plist */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -1665,6 +1736,22 @@
 			path = ../Source/Core/FreeType;
 			sourceTree = "<group>";
 		};
+		A1FE784618F294BF00426D74 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				A1FE784718F294FA00426D74 /* RocketMenuPlugin.cpp */,
+				A1FE784818F294FA00426D74 /* RocketMenuPlugin.h */,
+				A1FE784918F294FA00426D74 /* ElementProgressBar.cpp */,
+				A1FE784A18F294FA00426D74 /* RocketAnimationPlugin.cpp */,
+				A1FE784B18F294FA00426D74 /* Helpers.cpp */,
+				A1FE784C18F294FA00426D74 /* RocketAnimationPlugin.h */,
+				A1FE784D18F294FA00426D74 /* ProgressBar.cpp */,
+				A1FE784E18F294FA00426D74 /* PluginUtils.cpp */,
+				A1FE784F18F294FA00426D74 /* Helpers.h */,
+			);
+			name = Ext;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1672,6 +1759,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FE785818F294FA00426D74 /* Helpers.h in Headers */,
+				A1FE785518F294FA00426D74 /* RocketAnimationPlugin.h in Headers */,
+				A1FE785118F294FA00426D74 /* RocketMenuPlugin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1886,6 +1976,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1FE780518F2949200426D74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1FE780618F2949200426D74 /* Clipboard.h in Headers */,
+				A1FE780718F2949200426D74 /* Controls.h in Headers */,
+				A1FE780818F2949200426D74 /* DataFormatter.h in Headers */,
+				A1FE780918F2949200426D74 /* DataQuery.h in Headers */,
+				A1FE780A18F2949200426D74 /* DataSource.h in Headers */,
+				A1FE780B18F2949200426D74 /* DataSourceListener.h in Headers */,
+				A1FE780C18F2949200426D74 /* ElementDataGrid.h in Headers */,
+				A1FE780D18F2949200426D74 /* ElementDataGridCell.h in Headers */,
+				A1FE780E18F2949200426D74 /* ElementDataGridExpandButton.h in Headers */,
+				A1FE780F18F2949200426D74 /* ElementDataGridRow.h in Headers */,
+				A1FE781018F2949200426D74 /* ElementForm.h in Headers */,
+				A1FE781118F2949200426D74 /* ElementFormControl.h in Headers */,
+				A1FE781218F2949200426D74 /* ElementFormControlDataSelect.h in Headers */,
+				A1FE781318F2949200426D74 /* ElementFormControlInput.h in Headers */,
+				A1FE781418F2949200426D74 /* ElementFormControlSelect.h in Headers */,
+				A1FE781518F2949200426D74 /* ElementFormControlTextArea.h in Headers */,
+				A1FE781618F2949200426D74 /* ElementTabSet.h in Headers */,
+				A1FE781718F2949200426D74 /* Header.h in Headers */,
+				A1FE781818F2949200426D74 /* SelectOption.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07A0554694100DB518D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2082,6 +2198,26 @@
 			productReference = 6E8B1EC6123AC80700C451C8 /* libRocketDebuggerOSX.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		A1FE780218F2949200426D74 /* RocketExtensionsOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1FE784118F2949200426D74 /* Build configuration list for PBXNativeTarget "RocketExtensionsOSX" */;
+			buildPhases = (
+				A1FE780518F2949200426D74 /* Headers */,
+				A1FE781918F2949200426D74 /* Resources */,
+				A1FE781A18F2949200426D74 /* Sources */,
+				A1FE783F18F2949200426D74 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1FE786018F295B100426D74 /* PBXTargetDependency */,
+				A1FE780318F2949200426D74 /* PBXTargetDependency */,
+			);
+			name = RocketExtensionsOSX;
+			productName = RocketControlsOSX;
+			productReference = A1FE784418F2949200426D74 /* libRocketExtensionsOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		D2AAC07D0554694100DB518D /* RocketCoreiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "RocketCoreiOS" */;
@@ -2125,6 +2261,7 @@
 				6E8B1DDB123ABC7800C451C8 /* RocketCoreOSX */,
 				6E8B1EBB123AC7A200C451C8 /* RocketDebuggeriOS */,
 				6E8B1EC5123AC80700C451C8 /* RocketDebuggerOSX */,
+				A1FE780218F2949200426D74 /* RocketExtensionsOSX */,
 			);
 		};
 /* End PBXProject section */
@@ -2171,6 +2308,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1FE781918F2949200426D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2188,27 +2332,33 @@
 				6E8B1CBD123AB0CC00C451C8 /* ElementDataGridCell.cpp in Sources */,
 				6E8B1CBE123AB0CC00C451C8 /* ElementDataGridExpandButton.cpp in Sources */,
 				6E8B1CBF123AB0CC00C451C8 /* ElementDataGridRow.cpp in Sources */,
+				A1FE785618F294FA00426D74 /* ProgressBar.cpp in Sources */,
 				6E8B1CC0123AB0CC00C451C8 /* ElementForm.cpp in Sources */,
 				6E8B1CC1123AB0CC00C451C8 /* ElementFormControl.cpp in Sources */,
 				6E8B1CC2123AB0CC00C451C8 /* ElementFormControlDataSelect.cpp in Sources */,
 				6E8B1CC3123AB0CC00C451C8 /* ElementFormControlInput.cpp in Sources */,
 				6E8B1CC4123AB0CC00C451C8 /* ElementFormControlSelect.cpp in Sources */,
 				6E8B1CC5123AB0CC00C451C8 /* ElementFormControlTextArea.cpp in Sources */,
+				A1FE785018F294FA00426D74 /* RocketMenuPlugin.cpp in Sources */,
 				6E8B1CC6123AB0CC00C451C8 /* ElementTabSet.cpp in Sources */,
 				6E8B1CC7123AB0CC00C451C8 /* ElementTextSelection.cpp in Sources */,
 				6E8B1CC9123AB0CC00C451C8 /* InputType.cpp in Sources */,
 				6E8B1CCB123AB0CC00C451C8 /* InputTypeButton.cpp in Sources */,
 				6E8B1CCD123AB0CC00C451C8 /* InputTypeCheckbox.cpp in Sources */,
 				6E8B1CCF123AB0CC00C451C8 /* InputTypeRadio.cpp in Sources */,
+				A1FE785418F294FA00426D74 /* Helpers.cpp in Sources */,
 				6E8B1CD1123AB0CC00C451C8 /* InputTypeRange.cpp in Sources */,
 				6E8B1CD3123AB0CC00C451C8 /* InputTypeSubmit.cpp in Sources */,
 				6E8B1CD5123AB0CC00C451C8 /* InputTypeText.cpp in Sources */,
 				6E8B1CE5123AB0CC00C451C8 /* SelectOption.cpp in Sources */,
+				A1FE785218F294FA00426D74 /* ElementProgressBar.cpp in Sources */,
 				6E8B1CE6123AB0CC00C451C8 /* WidgetDropDown.cpp in Sources */,
 				6E8B1CE8123AB0CC00C451C8 /* WidgetSlider.cpp in Sources */,
 				6E8B1CEA123AB0CC00C451C8 /* WidgetSliderInput.cpp in Sources */,
 				6E8B1CEC123AB0CC00C451C8 /* WidgetTextInput.cpp in Sources */,
+				A1FE785718F294FA00426D74 /* PluginUtils.cpp in Sources */,
 				6E8B1CEE123AB0CC00C451C8 /* WidgetTextInputMultiLine.cpp in Sources */,
+				A1FE785318F294FA00426D74 /* RocketAnimationPlugin.cpp in Sources */,
 				6E8B1CF0123AB0CC00C451C8 /* WidgetTextInputSingleLine.cpp in Sources */,
 				6E8B1CF2123AB0CC00C451C8 /* WidgetTextInputSingleLinePassword.cpp in Sources */,
 				6E8B1CF4123AB0CC00C451C8 /* XMLNodeHandlerDataGrid.cpp in Sources */,
@@ -2438,6 +2588,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1FE781A18F2949200426D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1FE785918F2958100426D74 /* RocketMenuPlugin.cpp in Sources */,
+				A1FE785A18F2958100426D74 /* ElementProgressBar.cpp in Sources */,
+				A1FE785B18F2958100426D74 /* RocketAnimationPlugin.cpp in Sources */,
+				A1FE785C18F2958100426D74 /* Helpers.cpp in Sources */,
+				A1FE785D18F2958100426D74 /* ProgressBar.cpp in Sources */,
+				A1FE785E18F2958100426D74 /* PluginUtils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2610,6 +2773,16 @@
 			isa = PBXTargetDependency;
 			target = 6E8B1DDB123ABC7800C451C8 /* RocketCoreOSX */;
 			targetProxy = 6E8B1F97123ACC3B00C451C8 /* PBXContainerItemProxy */;
+		};
+		A1FE780318F2949200426D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E8B1DDB123ABC7800C451C8 /* RocketCoreOSX */;
+			targetProxy = A1FE780418F2949200426D74 /* PBXContainerItemProxy */;
+		};
+		A1FE786018F295B100426D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E8B1E6A123ABCEF00C451C8 /* RocketControlsOSX */;
+			targetProxy = A1FE785F18F295B100426D74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2928,6 +3101,62 @@
 			};
 			name = Release;
 		};
+		A1FE784218F2949200426D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Rocket_Prefix.pch;
+				INFOPLIST_FILE = "RocketControlsOSX copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = RocketExtensionsOSX;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A1FE784318F2949200426D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Rocket_Prefix.pch;
+				INFOPLIST_FILE = "RocketControlsOSX copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = RocketExtensionsOSX;
+				SDKROOT = macosx;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2990,6 +3219,15 @@
 			buildConfigurations = (
 				6E8B1EC8123AC80800C451C8 /* Debug */,
 				6E8B1EC9123AC80800C451C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1FE784118F2949200426D74 /* Build configuration list for PBXNativeTarget "RocketExtensionsOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1FE784218F2949200426D74 /* Debug */,
+				A1FE784318F2949200426D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

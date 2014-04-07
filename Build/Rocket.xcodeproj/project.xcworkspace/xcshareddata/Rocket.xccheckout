@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0044C2B3-D2C2-4F71-8857-8E54CDD7448B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Rocket</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D6F0189E-25C1-4206-BAD0-C4BF8DCD3082</key>
+		<string>https://github.com/yousry/libRocket.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Build/Rocket.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D6F0189E-25C1-4206-BAD0-C4BF8DCD3082</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yousry/libRocket.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D6F0189E-25C1-4206-BAD0-C4BF8DCD3082</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D6F0189E-25C1-4206-BAD0-C4BF8DCD3082</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libRocket</string>
+		</dict>
+	</array>
+</dict>
+</plist>
