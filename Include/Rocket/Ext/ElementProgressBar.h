@@ -62,6 +62,8 @@ private:
 	float value;
 };
 
+void Initialise();
+
 }
 }
 
